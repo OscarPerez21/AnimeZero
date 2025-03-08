@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "poppins";
+  src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "raleway-regular";
+  src: url("../assets/fonts/Raleway-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "raleway-light";
+  src: url("../assets/fonts/Raleway-Light.woff2") format("woff2");
+}

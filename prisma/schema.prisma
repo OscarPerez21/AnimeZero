@@ -1,0 +1,25 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:../backend/src/AnimeServer.db"
+}   
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model animes {
+  id_anime    Int     @id @default(autoincrement())
+  title       String
+  description String?
+  chapters    Int?
+  poster      String?
+  anime_chapters anime_chapters[]
+}
+
+model anime_chapters{
+  id_anime_chapters Int @id @default(autoincrement())
+  id_anime          Int?
+  video_url         String?
+  view_state        Int?
+  animes            animes? @relation(fields: [id_anime], references: [id_anime])
+}
